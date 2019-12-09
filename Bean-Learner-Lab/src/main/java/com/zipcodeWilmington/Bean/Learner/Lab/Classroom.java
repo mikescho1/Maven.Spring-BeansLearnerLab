@@ -12,7 +12,6 @@ public class Classroom {
     }
 
     public void hostLecture(Teacher teacher, double numOfHours) {
-
     }
 
 
