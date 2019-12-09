@@ -10,4 +10,9 @@ public class BeanLearnerLabApplication {
 		SpringApplication.run(BeanLearnerLabApplication.class, args);
 	}
 
+
+
+
+
+
 }
