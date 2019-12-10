@@ -7,6 +7,8 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
 
     private List<PersonType> personList;
 
+    public People() {
+    }
 
     public People(List<PersonType> personList) {
         this.personList = personList;
@@ -38,15 +40,16 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
     }
 
     public PersonType findById(Long id) {
-        for (PersonType i : personList) {
-            if (i.getId() == id) {
-                return i;
+        for (PersonType person : personList) {
+            if (person.getId() == id) {
+                return person;
             }
         }
         return null;
+
     }
 
-    public List<PersonType> findAllPersons()   {
+    public List<PersonType> findAllPersons() {
         return personList;
     }
 
