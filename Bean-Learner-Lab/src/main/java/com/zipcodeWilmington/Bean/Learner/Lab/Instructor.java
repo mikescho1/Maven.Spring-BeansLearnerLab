@@ -5,32 +5,28 @@ import org.assertj.core.internal.Iterables;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Instructor extends Person implements Teacher{
+public class Instructor extends Person implements Teacher {
 
 
-
-
-    public Instructor(Long id, String name) {
-        super(id, name);
+    public Instructor(Long id) {
+        super(id);
     }
 
+
     @Override
-    public void teach(Learner learners, double numOfHours) {
-    learners.learn(numOfHours);
+    public void teach(Learner learner, double numOfHours) {
     }
 
     @Override
     public void lecture(Iterable<? extends Learner> learners, double numOfHours) {
+        ArrayList<Learner> learnerList = new ArrayList<>();
 
-        ArrayList<Learner> listOfLearners = new ArrayList<>();
-        double splitHours = numOfHours / listOfLearners.size();
-
-        for(Learner i : learners)   {
-            listOfLearners.add(i);
+        for (Learner i : learners) {
+            learnerList.add(i);
         }
-
-        for(Learner i : learners)   {
-            i.learn(splitHours);
+        int numOfLearners = learnerList.size();
+        for (Learner i : learnerList) {
+            i.learn(numOfHours / numOfLearners);
         }
     }
 }

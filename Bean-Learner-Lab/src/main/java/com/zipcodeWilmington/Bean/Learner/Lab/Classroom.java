@@ -11,7 +11,12 @@ public class Classroom {
         this.students = students;
     }
 
+//    public void hostLecture(Instructor instructor, double numOfHours) {
+//        instructor.lecture(this.students, numOfHours);
+//    }
+
     public void hostLecture(Teacher teacher, double numOfHours) {
+        teacher.lecture(this.students, numOfHours);
     }
 
 

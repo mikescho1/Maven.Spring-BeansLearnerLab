@@ -1,57 +1,49 @@
 package com.zipcodeWilmington.Bean.Learner.Lab;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public abstract class People<PersonType extends Person> implements Iterable<PersonType> {
 
-    private List<PersonType> personList;
+    private ArrayList<PersonType> personList;
 
-    public People() {
-    }
 
-    public People(List<PersonType> personList) {
+    public People(ArrayList<PersonType> personList) {
         this.personList = personList;
     }
 
-    public void add(PersonType person) {
+    public void add(PersonType person)  {
         personList.add(person);
     }
 
-    public void remove(Long personTypeId) {
-        if (personList.contains(personTypeId)) {
-            personList.remove(personTypeId);
-        }
+    public void remove(PersonType person)   {
+        personList.remove(person);
     }
 
-    public Integer getPersonListSize() {
+    public int size()   {
         return personList.size();
     }
 
-    public void clearPersonList() {
+    public void clear() {
         personList.clear();
     }
 
-    public void addAllToPersonList(Iterable<PersonType> personList) {
-        ArrayList<PersonType> listOfPersons = new ArrayList<>();
-        for (PersonType i : personList) {
-            listOfPersons.add(i);
+    public void addAll(Iterable<PersonType> listOfPersons)  {
+        for(PersonType i : listOfPersons)   {
+            personList.add(i);
         }
     }
 
     public PersonType findById(Long id) {
-        for (PersonType person : personList) {
-            if (person.getId() == id) {
-                return person;
+        for(PersonType i : personList)  {
+            if(i.getId() == id) {
+                return i;
             }
-        }
-        return null;
-
+        }   return null;
     }
 
-    public List<PersonType> findAllPersons() {
+    public ArrayList<PersonType> findAll()  {
         return personList;
     }
-
-
 }

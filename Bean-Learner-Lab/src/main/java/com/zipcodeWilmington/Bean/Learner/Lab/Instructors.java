@@ -8,15 +8,13 @@ import java.util.function.Consumer;
 
 public class Instructors extends People<Instructor> {
 
-    private Iterable<Instructor> instructorIterable;
-
 
     public Instructors()    {
     }
 
 
-    public Instructors(Iterable<Instructor> instructorIterable) {    //TODO check if the instructors constructor is correct.
-        this.instructorIterable = instructorIterable;
+    public Instructors(Iterable<Instructor> instructors) {    //TODO check if the instructors constructor is correct.
+        super.addAllToPersonList(instructors);
     }
 
     @Override
