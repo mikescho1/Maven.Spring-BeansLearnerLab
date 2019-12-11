@@ -39,7 +39,8 @@ public class ClassroomConfigTests {
     }
 
 
-    @Test public void previousCohortTest()  {
+    @Test
+    public void previousCohortTest() {
         Instructor instructor1 = new Instructor(4L);
         Student student1 = new Student(2L);
         Instructors instructors10 = new Instructors();
@@ -53,9 +54,7 @@ public class ClassroomConfigTests {
         previousCohort = new Classroom(new Instructors(), new Students());
 
 
-
     }
-
 
 
 }

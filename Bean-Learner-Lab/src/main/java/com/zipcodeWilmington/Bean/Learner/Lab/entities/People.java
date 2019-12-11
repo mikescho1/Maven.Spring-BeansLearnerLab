@@ -12,7 +12,7 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
 
 
     public People() {
-        this(new ArrayList<>());
+        personList = new ArrayList<>();
     }
 
     public People(ArrayList<PersonType> personList) {
@@ -55,7 +55,7 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
 
     @Override
     public Iterator<PersonType> iterator() {
-        return null;
+        return personList.iterator();
     }
 
     @Override
