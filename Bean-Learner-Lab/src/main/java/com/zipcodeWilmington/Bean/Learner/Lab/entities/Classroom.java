@@ -1,4 +1,6 @@
-package com.zipcodeWilmington.Bean.Learner.Lab;
+package com.zipcodeWilmington.Bean.Learner.Lab.entities;
+
+import com.zipcodeWilmington.Bean.Learner.Lab.repositories.Teacher;
 
 public class Classroom {
 

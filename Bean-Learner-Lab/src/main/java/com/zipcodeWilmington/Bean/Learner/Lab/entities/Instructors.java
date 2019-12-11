@@ -1,7 +1,6 @@
-package com.zipcodeWilmington.Bean.Learner.Lab;
+package com.zipcodeWilmington.Bean.Learner.Lab.entities;
 
 import java.util.*;
-import java.util.function.Consumer;
 
 public class Instructors extends People<Instructor> {
 

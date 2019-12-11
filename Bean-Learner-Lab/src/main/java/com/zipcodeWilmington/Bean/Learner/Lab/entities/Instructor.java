@@ -1,8 +1,8 @@
-package com.zipcodeWilmington.Bean.Learner.Lab;
+package com.zipcodeWilmington.Bean.Learner.Lab.entities;
 
-import org.assertj.core.internal.Iterables;
+import com.zipcodeWilmington.Bean.Learner.Lab.repositories.Learner;
+import com.zipcodeWilmington.Bean.Learner.Lab.repositories.Teacher;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Instructor extends Person implements Teacher {

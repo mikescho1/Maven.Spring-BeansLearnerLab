@@ -1,6 +1,8 @@
-package com.zipcodeWilmington.Bean.Learner.Lab;
+package com.zipcodeWilmington.Bean.Learner.Lab.entities;
 
-public class Student extends Person implements Learner{
+import com.zipcodeWilmington.Bean.Learner.Lab.repositories.Learner;
+
+public class Student extends Person implements Learner {
 
     private double totalStudyTime;
 

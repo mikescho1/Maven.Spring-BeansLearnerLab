@@ -1,4 +1,4 @@
-package com.zipcodeWilmington.Bean.Learner.Lab;
+package com.zipcodeWilmington.Bean.Learner.Lab.repositories;
 
 public interface Teacher {
 

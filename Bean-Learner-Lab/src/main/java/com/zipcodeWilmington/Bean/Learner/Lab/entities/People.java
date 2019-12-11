@@ -1,8 +1,6 @@
-package com.zipcodeWilmington.Bean.Learner.Lab;
+package com.zipcodeWilmington.Bean.Learner.Lab.entities;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 public abstract class People<PersonType extends Person> implements Iterable<PersonType> {
 
