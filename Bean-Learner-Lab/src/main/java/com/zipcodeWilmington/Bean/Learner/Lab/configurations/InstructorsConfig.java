@@ -1,6 +1,7 @@
-package com.zipcodeWilmington.Bean.Learner.Lab.services;
+package com.zipcodeWilmington.Bean.Learner.Lab.configurations;
 
 import com.zipcodeWilmington.Bean.Learner.Lab.entities.Instructors;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -10,19 +11,20 @@ public class InstructorsConfig {
 
     @Bean(name = "tcUsaInstructors")
     public Instructors tcUsaInstructors()   {
-        return null;
+        return new Instructors();
     }
 
 
     @Bean(name = "tcUkInstructors")
     public Instructors tcUkInstructors()    {
-        return null;
+        return new Instructors();
     }
 
-    @Bean
+
     @Primary
+    @Bean
     public Instructors instructors()    {
-        return null;
+        return new Instructors();
     }
 
 

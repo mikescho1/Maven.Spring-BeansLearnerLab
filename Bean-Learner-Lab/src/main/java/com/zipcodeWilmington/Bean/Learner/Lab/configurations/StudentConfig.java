@@ -1,4 +1,4 @@
-package com.zipcodeWilmington.Bean.Learner.Lab.services;
+package com.zipcodeWilmington.Bean.Learner.Lab.configurations;
 
 import com.zipcodeWilmington.Bean.Learner.Lab.entities.Students;
 import org.springframework.context.annotation.Bean;
@@ -9,12 +9,13 @@ public class StudentConfig {
 
     @Bean(name = "students")
     public Students currentStudents()   {
-        return null;
+        return new Students();
+
     }
 
-    @Bean(name = "previousStudents")
+    @Bean
     public Students previousStudents()  {
-        return null;
+        return new Students();
     }
 
 

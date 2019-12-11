@@ -1,12 +1,19 @@
 package com.zipcodeWilmington.Bean.Learner.Lab.entities;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
 public abstract class People<PersonType extends Person> implements Iterable<PersonType> {
+
 
     private ArrayList<PersonType> personList;
 
 
+    public People() {
+        this(new ArrayList<>());
+    }
 
     public People(ArrayList<PersonType> personList) {
         this.personList = personList;
@@ -44,5 +51,20 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
 
     public ArrayList<PersonType> findAll()  {
         return personList;
+    }
+
+    @Override
+    public Iterator<PersonType> iterator() {
+        return null;
+    }
+
+    @Override
+    public void forEach(Consumer<? super PersonType> action) {
+
+    }
+
+    @Override
+    public Spliterator<PersonType> spliterator() {
+        return null;
     }
 }
