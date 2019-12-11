@@ -34,8 +34,8 @@ public class ClassroomConfigTests {
         students10.add(student1);
         currentCohort = new Classroom(instructors10, students10);
 
-        Assert.assertEquals(4L, currentCohort.getInstructors().findById(4L));
-        Assert.assertEquals(2L, currentCohort.getStudents().findById(2L));
+        Assert.assertEquals(instructor1, currentCohort.getInstructors().findById(4L));
+        Assert.assertEquals(student1, currentCohort.getStudents().findById(2L));
     }
 
 
@@ -48,8 +48,8 @@ public class ClassroomConfigTests {
         students10.add(student1);
         previousCohort = new Classroom(instructors10, students10);
 
-        Assert.assertEquals(4L, previousCohort.getInstructors().findById(4L));
-        Assert.assertEquals(2L, previousCohort.getStudents().findById(2L));
+        Assert.assertEquals(instructor1, previousCohort.getInstructors().findById(4L));
+        Assert.assertEquals(student1, previousCohort.getStudents().findById(2L));
         previousCohort = new Classroom(new Instructors(), new Students());
 
 
