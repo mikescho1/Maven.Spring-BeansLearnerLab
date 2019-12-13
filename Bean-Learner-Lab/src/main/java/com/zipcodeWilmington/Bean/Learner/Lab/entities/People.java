@@ -49,6 +49,7 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
         }   return null;
     }
 
+
     public ArrayList<PersonType> findAll()  {
         return personList;
     }
@@ -60,11 +61,12 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
 
     @Override
     public void forEach(Consumer<? super PersonType> action) {
+        personList.forEach(action);
 
     }
 
     @Override
     public Spliterator<PersonType> spliterator() {
-        return null;
+        return personList.spliterator();
     }
 }

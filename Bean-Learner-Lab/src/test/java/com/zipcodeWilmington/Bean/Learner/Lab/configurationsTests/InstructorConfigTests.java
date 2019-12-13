@@ -27,17 +27,11 @@ public class InstructorConfigTests {
 
     @Test
     public void tcUsaInstructors()  {
-        tcUsaInstructors = new Instructors();
-        Instructor instructor1 = new Instructor(5L);
-        tcUsaInstructors.add(instructor1);
-        Assert.assertEquals(1, tcUsaInstructors.size());
+        Assert.assertTrue(tcUsaInstructors.size() == 1);
     }
 
     @Test
     public void setTcUkInstructors()  {
-        tcUkInstructors = new Instructors();
-        Instructor instructor1 = new Instructor(5L);
-        tcUkInstructors.add(instructor1);
-        Assert.assertEquals(1, tcUkInstructors.size());
+        Assert.assertTrue(tcUkInstructors.size() == 1);
     }
 }

@@ -8,41 +8,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class AlumniTests {
+
+    private Alumni alumni;
+
+
 
 
 
     @Test
-    public void numberOfHoursTaughtTest()    {
-        Student student1 = new Student(5L);
-        Student student2 = new Student(6L);
-        Instructor instructor1 = new Instructor(9L);
-        Instructor instructor2 = new Instructor(10L);
-        Students students100 = new Students();
-        Instructors instructors100 = new Instructors();
+    public void executeBootCampTest()    {
 
-        students100.add(student1);
-        students100.add(student2);
-        instructors100.add(instructor1);
-        instructors100.add(instructor2);
-
-        Alumni alumni = new Alumni(instructors100, students100);
-
-
-
-        alumni.executeBootCamp();
-        int actual = 0;
-
-        for(Student i : students100)    {
-            actual += i.getTotalStudyTime();
+        for(Student i : alumni.getStudents())    {
+            Assert.assertEquals(2400, i.getTotalStudyTime(),.01);
         }
-
-        Assert.assertEquals(2400, actual);
-
-
-
-
-
     }
 }

@@ -2,6 +2,7 @@ package com.zipcodeWilmington.Bean.Learner.Lab.entities;
 
 import com.zipcodeWilmington.Bean.Learner.Lab.repositories.Learner;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -9,10 +10,16 @@ import java.util.ArrayList;
 
 @Component
 public class Alumni {
-    Instructors instructors;
-    Students students;
 
     @Autowired
+    @Qualifier("instructors")
+    Instructors instructors;
+
+    @Autowired
+    @Qualifier("students")
+    Students students;
+
+
     public Alumni(Instructors instructors, Students students) {
         this.instructors = instructors;
         this.students = students;

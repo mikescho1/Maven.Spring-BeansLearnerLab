@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class StudentConfigTests {
@@ -19,27 +21,21 @@ public class StudentConfigTests {
     @Qualifier("students")
     private Students currentStudents;
 
+
     @Autowired
     @Qualifier("previousStudents")
     private Students previousStudents;
 
+
+
     @Test
-    public void currentStudents()   {
-        currentStudents = new Students();
-        Student student1 = new Student(2L);
-        Student student2 = new Student(3L);
-        currentStudents.add(student1);
-        currentStudents.add(student2);
-        Assert.assertEquals(2, (int) currentStudents.size());
+    public void currentStudents() {
+        Assert.assertTrue(this.currentStudents.size() == 2);
     }
 
     @Test
     public void previousStudents()   {
-        previousStudents = new Students();
-        Student student1 = new Student(2L);
-        Student student2 = new Student(3L);
-        previousStudents.add(student1);
-        previousStudents.add(student2);
-        Assert.assertEquals(2, (int) previousStudents.size());
+        Assert.assertTrue(this.previousStudents.size() == 2);
     }
+
 }
