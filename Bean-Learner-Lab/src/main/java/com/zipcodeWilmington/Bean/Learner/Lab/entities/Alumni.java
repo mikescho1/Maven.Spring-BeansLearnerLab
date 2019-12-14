@@ -12,11 +12,10 @@ import java.util.ArrayList;
 public class Alumni {
 
     @Autowired
-    @Qualifier("instructors")
     Instructors instructors;
 
     @Autowired
-    @Qualifier("students")
+    @Qualifier("previousStudents")
     Students students;
 
 

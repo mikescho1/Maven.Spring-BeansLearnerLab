@@ -30,12 +30,12 @@ public class StudentConfigTests {
 
     @Test
     public void currentStudents() {
-        Assert.assertTrue(this.currentStudents.size() == 2);
+        Assert.assertTrue(currentStudents.size() == 2);
     }
 
     @Test
     public void previousStudents()   {
-        Assert.assertTrue(this.previousStudents.size() == 2);
+        Assert.assertTrue(previousStudents.size() == 2);
     }
 
 }

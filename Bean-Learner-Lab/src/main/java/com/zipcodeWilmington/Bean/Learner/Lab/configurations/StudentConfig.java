@@ -14,6 +14,8 @@ public class StudentConfig {
 
 
 
+
+
     @Bean(name = "students")
     public Students currentStudents() {
         Students currentStudents = new Students();
@@ -25,7 +27,7 @@ public class StudentConfig {
         return currentStudents;
     }
 
-    @Bean
+    @Bean(name = "previousStudents")
     public Students previousStudents() {
         Students previousStudents = new Students();
         Student student1 = new Student(2L);
@@ -33,7 +35,7 @@ public class StudentConfig {
         previousStudents.add(student1);
         previousStudents.add(student2);
 
-        return new Students();
+        return previousStudents;
     }
 
 

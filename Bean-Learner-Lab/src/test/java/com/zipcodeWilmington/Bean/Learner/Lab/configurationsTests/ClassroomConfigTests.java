@@ -19,11 +19,7 @@ public class ClassroomConfigTests {
     @Qualifier("currentCohort")
     private Classroom currentCohort;
 
-    private Instructors instructors10;
-    private Students student10;
 
-    private Instructor instructor1;
-    private Student student1;
 
     @Autowired
     @Qualifier("previousCohort")
@@ -33,15 +29,15 @@ public class ClassroomConfigTests {
 
     @Test
     public void currentCohortTest() {
-        Assert.assertTrue(currentCohort.getInstructors().findById(4L) == instructor1);
-        Assert.assertTrue(currentCohort.getStudents().findById(2L) == student1);
+        Assert.assertTrue(currentCohort.getInstructors().findById(7L) != null);
+        Assert.assertTrue(currentCohort.getStudents().findById(2L) != null);
     }
 
 
     @Test
     public void previousCohortTest() {
-        Assert.assertTrue(previousCohort.getInstructors().findById(4L) == instructor1);
-        Assert.assertTrue(previousCohort.getStudents().findById(2L) == student1);
+        Assert.assertTrue(previousCohort.getInstructors().findById(9L) != null);
+        Assert.assertTrue(previousCohort.getStudents().findById(3L) != null);
     }
 
 

@@ -12,17 +12,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class AlumniTests {
 
+    @Autowired
     private Alumni alumni;
-
-
-
 
 
     @Test
     public void executeBootCampTest()    {
 
         for(Student i : alumni.getStudents())    {
-            Assert.assertEquals(2400, i.getTotalStudyTime(),.01);
+            Assert.assertEquals(1200, i.getTotalStudyTime(),.01);
         }
     }
 }

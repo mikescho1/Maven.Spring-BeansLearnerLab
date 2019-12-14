@@ -14,26 +14,36 @@ public class InstructorsConfig {
 
     @Bean(name = "tcUsaInstructors")
     public Instructors tcUsaInstructors() {
-        Instructors tcUsaInstructors = new Instructors();
+        Instructors tcUsaInstructors1 = new Instructors();
         Instructor instructor1 = new Instructor(5L);
-        tcUsaInstructors.add(instructor1);
-        return new Instructors();
+        tcUsaInstructors1.add(instructor1);
+        return tcUsaInstructors1;
     }
 
 
     @Bean(name = "tcUkInstructors")
     public Instructors tcUkInstructors() {
-        Instructors tcUkInstructors = new Instructors();
+        Instructors tcUkInstructors2 = new Instructors();
         Instructor instructor1 = new Instructor(5L);
-        tcUkInstructors.add(instructor1);
-        return new Instructors();
+        Instructor instructor2 = new Instructor(6L);
+        tcUkInstructors2.add(instructor1);
+        tcUkInstructors2.add(instructor2);
+        return tcUkInstructors2;
     }
 
-
-    @Primary
     @Bean
+    @Primary
     public Instructors instructors() {
-        return new Instructors();
+        Instructors instructors3 = new Instructors();
+        Instructor instructor3 = new Instructor(7L);
+        Instructor instructor4 = new Instructor(9L);
+
+
+
+        instructors3.add(instructor3);
+        instructors3.add(instructor4);
+
+        return instructors3;
     }
 
 
